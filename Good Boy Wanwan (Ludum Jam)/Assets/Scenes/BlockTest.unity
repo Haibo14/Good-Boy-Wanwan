@@ -1000,6 +1000,9 @@ MonoBehaviour:
     type: 3}
   CarPrefab4: {fileID: 2371161769496941180, guid: 7375f30d2df39864bac8444383fd178f,
     type: 3}
+  TimerWave: 4
+  TimerWave2: 6
+  Go: 1
 --- !u!4 &98027057
 Transform:
   m_ObjectHideFlags: 0
@@ -3219,12 +3222,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 555510279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c797821278f8e4db229f0e3dec7a70, type: 3}
+  m_Script: {fileID: 11500000, guid: 17430ecd914861c47923a8a3781c4e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination1: {fileID: 1187913054}
-  Destination2: {fileID: 1968204106}
-  Target: {fileID: 0}
   Material:
   - {fileID: 2100000, guid: 7ff0464b720741b42bdd38842cca6f03, type: 2}
   - {fileID: 2100000, guid: f1ac27e55ee12204fa4c0cd8f3488d24, type: 2}
@@ -6333,6 +6333,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1203729329}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1125425852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125425850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c797821278f8e4db229f0e3dec7a70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination1: {fileID: 1187913054}
+  Destination2: {fileID: 1968204106}
+  Target: {fileID: 0}
 --- !u!54 &1125425853
 Rigidbody:
   m_ObjectHideFlags: 0
