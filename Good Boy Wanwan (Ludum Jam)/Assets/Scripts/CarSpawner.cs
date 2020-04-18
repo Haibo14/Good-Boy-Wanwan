@@ -6,9 +6,14 @@ public class CarSpawner : MonoBehaviour
 {
 	public Transform Spawn1;
 	public Transform Spawn2;
+	public Transform Spawn3;
+	public Transform Spawn4;
+
 	public float Speed;
 	public GameObject CarPrefab;
 	public GameObject CarPrefab2;
+	public GameObject CarPrefab3;
+	public GameObject CarPrefab4;
 
 	private float Timer;
 
@@ -26,10 +31,17 @@ public class CarSpawner : MonoBehaviour
     	Timer -= Time.deltaTime;
     	if(Timer<0){
 	    	GameObject CarPrefab_o = Instantiate(CarPrefab, Spawn1.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o, 14.0f);
+	        Destroy(CarPrefab_o, 30.0f);
 
 	    	GameObject CarPrefab_o2 = Instantiate(CarPrefab2, Spawn2.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o2, 14.0f);
+	        Destroy(CarPrefab_o2, 30.0f);
+
+	        GameObject CarPrefab_o3 = Instantiate(CarPrefab3, Spawn3.position, Quaternion.identity) as GameObject;
+	        Destroy(CarPrefab_o3, 30.0f);
+
+	        GameObject CarPrefab_o4 = Instantiate(CarPrefab4, Spawn4.position, Quaternion.identity) as GameObject;
+	        Destroy(CarPrefab_o4, 30.0f);
+
 
 	    	Timer = Random.Range(1,3);
     	}    
