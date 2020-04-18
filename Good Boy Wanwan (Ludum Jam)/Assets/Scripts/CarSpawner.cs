@@ -20,6 +20,7 @@ public class CarSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {	Timer = 3.0f;
+        
         //GameObject Fish_Object = Instantiate(CarPrefab, position, gameObject.transform.rotation);
 
         
@@ -29,6 +30,7 @@ public class CarSpawner : MonoBehaviour
     void Update()
     {	
     	Timer -= Time.deltaTime;
+
     	if(Timer<0){
 	    	GameObject CarPrefab_o = Instantiate(CarPrefab, Spawn1.position, gameObject.transform.rotation) as GameObject;
 	        Destroy(CarPrefab_o, 30.0f);
