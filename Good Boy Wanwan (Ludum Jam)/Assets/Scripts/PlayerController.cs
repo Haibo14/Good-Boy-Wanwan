@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
 		transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
-		float animationSpeedPercent = ((running) ? 1 : .5f) * inputDir.magnitude;
+		
 		
 
 	}
