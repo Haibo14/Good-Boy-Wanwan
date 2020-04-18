@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 	public float speedSmoothTime = 0.1f;
 	float speedSmoothVelocity;
 	float currentSpeed;
+	public TextMesh DeathText;
 
 
 	Transform cameraT;
@@ -42,5 +43,13 @@ public class PlayerController : MonoBehaviour
 		transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
 
+	}
+
+	void OnCollisionEnter(Collision other){
+		if(other.gameObject.CompareTag("Car")){
+			DeathText.text = "YOU ARE ALREADY DEAD";
+			Destroy(DeathText, 5.0f);
+			//Destroy(this.gameObject, 5.0f);
+		}
 	}
 }
