@@ -15162,7 +15162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50acdeccc4629a24195ea3d4b95c58bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockCursor: 0
+  lockCursor: 1
   mouseSensitivity: 10
   target: {fileID: 950005644788492768}
   dstFromTarget: 15
