@@ -9,9 +9,6 @@ TagManager:
   - Car
   - Destination3
   - Destination4
-  - DeathDetector
-  - LeashAndWheelchair
-  - Ground
   layers:
   - Default
   - TransparentFX
