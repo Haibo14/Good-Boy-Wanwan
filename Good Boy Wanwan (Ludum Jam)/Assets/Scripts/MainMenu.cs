@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     {
 
         //Charger la scène de jeu
-        //SceneManager.LoadScene("NameOfTheScene");
+        SceneManager.LoadScene("FirstScene");
     }
 
     public void QuitGame()
