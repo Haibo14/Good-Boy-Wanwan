@@ -26,5 +26,23 @@ public class CursorColor : MonoBehaviour
 
     		Debug.Log("changement couleur");
     	}
+
+        if(other.gameObject.CompareTag("Destination2")){
+            rend.sharedMaterial = Material[2];
+
+            Debug.Log("changement couleur");
+        }
+/*        
+        if(other.gameObject.CompareTag("Destination3")){
+            rend.sharedMaterial = Material[3];
+
+            Debug.Log("changement couleur");
+        }
+
+        if(other.gameObject.CompareTag("Destination4")){
+            rend.sharedMaterial = Material[4];
+
+            Debug.Log("changement couleur");
+        }*/
     }
 }
