@@ -16,33 +16,53 @@ public class CarSpawner : MonoBehaviour
 	public GameObject CarPrefab4;
 
 	private float Timer;
+	public float TimerWave;
+	public float TimerWave2;
+
+	public bool Go;
 
     // Start is called before the first frame update
     void Start()
-    {	Timer = 3.0f;
-        
-        //GameObject Fish_Object = Instantiate(CarPrefab, position, gameObject.transform.rotation);
-
-        
+    {	
+    	TimerWave = 4.0f;
+    	TimerWave2 = 6.0f;
+    	Timer = 3.0f;
+    	Go = true;
+    
+        //GameObject Fish_Object = Instantiate(CarPrefab, position, gameObject.transform.rotation);    
     }
 
     // Update is called once per frame
     void Update()
     {	
+    	TimerWave -= Time.deltaTime;
+    	TimerWave2 -= Time.deltaTime;
+
+    	if(TimerWave<0){
+    		Go = false;
+    		if(TimerWave2<0){
+    			TimerWave = 4.0f;
+    			TimerWave2 = 6.0f;
+
+    			Go= true;
+    		}
+    	}
+
+
     	Timer -= Time.deltaTime;
 
-    	if(Timer<0){
+    	if(Timer<0 && Go == true){
 	    	GameObject CarPrefab_o = Instantiate(CarPrefab, Spawn1.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o, 30.0f);
+	        Destroy(CarPrefab_o, 50.0f);
 
 	    	GameObject CarPrefab_o2 = Instantiate(CarPrefab2, Spawn2.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o2, 30.0f);
+	        Destroy(CarPrefab_o2, 50.0f);
 
 	        GameObject CarPrefab_o3 = Instantiate(CarPrefab3, Spawn3.position, Quaternion.identity) as GameObject;
-	        Destroy(CarPrefab_o3, 30.0f);
+	        Destroy(CarPrefab_o3, 50.0f);
 
 	        GameObject CarPrefab_o4 = Instantiate(CarPrefab4, Spawn4.position, Quaternion.identity) as GameObject;
-	        Destroy(CarPrefab_o4, 30.0f);
+	        Destroy(CarPrefab_o4, 50.0f);
 
 
 	    	Timer = Random.Range(1,3);

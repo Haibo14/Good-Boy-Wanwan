@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Destination1
   - Destination2
+  - Car
   layers:
   - Default
   - TransparentFX
