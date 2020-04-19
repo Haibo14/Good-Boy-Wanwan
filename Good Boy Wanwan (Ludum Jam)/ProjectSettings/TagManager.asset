@@ -9,6 +9,8 @@ TagManager:
   - Car
   - Destination3
   - Destination4
+  - LeashAndWheelchair
+  - Ground
   layers:
   - Default
   - TransparentFX
