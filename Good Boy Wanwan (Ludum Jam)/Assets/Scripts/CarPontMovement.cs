@@ -14,6 +14,6 @@ public class CarPontMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	transform.Translate(new Vector3(1, 0, 0) * Speed);   
+    	transform.Translate(new Vector3(1, 0, 0) * Speed * Time.deltaTime, Space.World);   
     }
 }

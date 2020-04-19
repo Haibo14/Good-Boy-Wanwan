@@ -1001,7 +1001,7 @@ MonoBehaviour:
   CarPrefab4: {fileID: 2371161769496941180, guid: 7375f30d2df39864bac8444383fd178f,
     type: 3}
   TimerWave: 4
-  TimerWave2: 6
+  TimerWave2: 8
   Go: 1
 --- !u!4 &98027057
 Transform:
