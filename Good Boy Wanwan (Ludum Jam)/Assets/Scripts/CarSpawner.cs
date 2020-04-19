@@ -25,7 +25,7 @@ public class CarSpawner : MonoBehaviour
     void Start()
     {	
     	TimerWave = 4.0f;
-    	TimerWave2 = 6.0f;
+    	TimerWave2 = 8.0f;
     	Timer = 3.0f;
     	Go = true;
     
@@ -42,7 +42,7 @@ public class CarSpawner : MonoBehaviour
     		Go = false;
     		if(TimerWave2<0){
     			TimerWave = 4.0f;
-    			TimerWave2 = 6.0f;
+    			TimerWave2 = 8.0f;
 
     			Go= true;
     		}
@@ -53,19 +53,19 @@ public class CarSpawner : MonoBehaviour
 
     	if(Timer<0 && Go == true){
 	    	GameObject CarPrefab_o = Instantiate(CarPrefab, Spawn1.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o, 50.0f);
+	        Destroy(CarPrefab_o, 80.0f);
 
 	    	GameObject CarPrefab_o2 = Instantiate(CarPrefab2, Spawn2.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o2, 50.0f);
+	        Destroy(CarPrefab_o2, 80.0f);
 
 	        GameObject CarPrefab_o3 = Instantiate(CarPrefab3, Spawn3.position, Quaternion.identity) as GameObject;
-	        Destroy(CarPrefab_o3, 50.0f);
+	        Destroy(CarPrefab_o3, 80.0f);
 
 	        GameObject CarPrefab_o4 = Instantiate(CarPrefab4, Spawn4.position, Quaternion.identity) as GameObject;
-	        Destroy(CarPrefab_o4, 50.0f);
+	        Destroy(CarPrefab_o4, 80.0f);
 
 
-	    	Timer = Random.Range(1,3);
+	    	Timer = Random.Range(2,6);
     	}    
     }
 }
