@@ -3,6 +3,10 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+	[SerializeField] private Animator PatteAvGAnimator;
+	[SerializeField] private Animator PatteAvDAnimator;
+	[SerializeField] private Animator PatteArGAnimator;
+	[SerializeField] private Animator PatteArDAnimator;
 
 	public float walkSpeed = 2;
 	public float runSpeed = 6;
@@ -15,13 +19,18 @@ public class PlayerController : MonoBehaviour
 	float currentSpeed;
 	public TextMesh DeathText;
 
+	int state;
+	
 
 	Transform cameraT;
 
 	void Start()
 	{
-	
 		cameraT = Camera.main.transform;
+
+		
+
+		state = 0;
 	}
 
 	void Update()
@@ -34,6 +43,12 @@ public class PlayerController : MonoBehaviour
 		{
 			float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + cameraT.eulerAngles.y;
 			transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
+
+			state = 1;
+
+		} else{
+			state = 0;
+
 		}
 
 		bool running = Input.GetKey(KeyCode.LeftShift);
@@ -42,7 +57,15 @@ public class PlayerController : MonoBehaviour
 
 		transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
+		if (running == true)
+		{
+			state = 2;
+		}
 
+		PatteAvGAnimator.SetInteger("State", state);
+		PatteArGAnimator.SetInteger("State", state);
+		PatteAvDAnimator.SetInteger("State", state);
+		PatteArDAnimator.SetInteger("State", state);
 	}
 
 	void OnCollisionEnter(Collision other){
