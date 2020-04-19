@@ -963,7 +963,7 @@ MonoBehaviour:
   mouseSensitivity: 10
   target: {fileID: 170220147}
   dstFromTarget: 10
-  pitchMinMax: {x: -40, y: 85}
+  pitchMinMax: {x: 0, y: 85}
   rotationSmoothTime: 0.12
 --- !u!1 &1062096101
 GameObject:
