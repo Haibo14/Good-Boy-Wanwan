@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    bool alive;
+    public GameObject granny;
 
+    bool alive;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class Death : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Ground"))
             {
                 Debug.Log("Grounded");
+                alive = false;
             }
         }
 
@@ -34,6 +36,7 @@ public class Death : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Ground"))
             {
                 Debug.Log("Grounded");
+                alive = false;
             }
         }
 
@@ -42,6 +45,7 @@ public class Death : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Ground"))
             {
                 Debug.Log("Grounded");
+                alive = false;
             }
         }
 
@@ -50,6 +54,7 @@ public class Death : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Ground"))
             {
                 Debug.Log("Grounded");
+                alive = false;
             }
         }
 
@@ -60,6 +65,13 @@ public class Death : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 0.25f, Color.yellow);
 
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 0.25f, Color.yellow);
+
+        if(alive == false)
+        {
+            granny.transform.parent = null;
+            granny.AddComponent<Rigidbody>();
+            alive = true;
+        }
     }
 
 }
