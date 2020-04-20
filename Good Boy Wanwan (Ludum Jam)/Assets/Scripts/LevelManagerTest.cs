@@ -53,12 +53,6 @@ public class LevelManagerTest : MonoBehaviour
             whoIsDead.SetText("Granny is dead");
         }
 
-        if (player == null)
-        {
-            Instantiate(DuoPrefab, CheckPoint.transform.position, Quaternion.identity);
-            wanwanIsDead = false;
-            grannyIsDead = false;
-        }
 
         if (lost == true)
         {
@@ -76,6 +70,10 @@ public class LevelManagerTest : MonoBehaviour
         lost = false;
         GameObject player = GameObject.FindWithTag("Duo");
         Destroy(player);
+
+        Instantiate(DuoPrefab, CheckPoint.transform.position, Quaternion.identity);
+        wanwanIsDead = false;
+        grannyIsDead = false;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
