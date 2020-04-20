@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class LevelManagerTest : MonoBehaviour
 {
@@ -10,12 +14,18 @@ public class LevelManagerTest : MonoBehaviour
 
     public GameObject DeathMenu;
 
+    public GameObject whoIsDeadText;
+
+    //public TextMeshProUGUI whoIsDead;
+
     public bool wanwanIsDead;
     public bool grannyIsDead;
     bool lost;
 
     void Start()
     {
+       
+        
         wanwanIsDead = false;
         grannyIsDead = false;
         lost = false;
@@ -26,17 +36,24 @@ public class LevelManagerTest : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Duo");
 
-        if (wanwanIsDead == true || grannyIsDead == true)
+        if (wanwanIsDead == true)
         {
             lost = true;
+            TextMeshProUGUI whoIsDead = whoIsDeadText.GetComponent<TextMeshProUGUI>();
+
+            whoIsDead.SetText("Wanwan is dead");
         }
 
-        if (player == null)
+        if (grannyIsDead == true)
         {
-            Instantiate(DuoPrefab, CheckPoint.transform.position, Quaternion.identity);
-            wanwanIsDead = false;
-            grannyIsDead = false;
+
+
+            lost = true;
+            TextMeshProUGUI whoIsDead = whoIsDeadText.GetComponent<TextMeshProUGUI>();
+
+            whoIsDead.SetText("Granny is dead");
         }
+
 
         if (lost == true)
         {
@@ -44,17 +61,25 @@ public class LevelManagerTest : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+
+        
     }
 
     public void Respawn()
     {
-        DeathMenu.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        /*DeathMenu.SetActive(false);
         lost = false;
         GameObject player = GameObject.FindWithTag("Duo");
         Destroy(player);
 
+        Instantiate(DuoPrefab, CheckPoint.transform.position, Quaternion.identity);
+        wanwanIsDead = false;
+        grannyIsDead = false;
+
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = false;*/
     }
 
         

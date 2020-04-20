@@ -33,7 +33,7 @@ public class CarPontMovement : MonoBehaviour
         if (collider.gameObject.CompareTag("LeashAndWheelchair") || collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("Car"))
         {
 
-            float force = 10000;
+            float force = 5000;
 
             Vector3 dir = collider.contacts[0].point - transform.position;
 
