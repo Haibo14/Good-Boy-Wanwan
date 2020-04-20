@@ -1761,6 +1761,16 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 3990766911654318414, guid: 0e16685d855019845b0a88de5d378c30,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990766911654318414, guid: 0e16685d855019845b0a88de5d378c30,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7590861593522548475, guid: 0e16685d855019845b0a88de5d378c30,
         type: 3}
       propertyPath: m_LocalPosition.x

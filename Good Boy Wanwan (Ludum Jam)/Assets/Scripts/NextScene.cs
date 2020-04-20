@@ -23,6 +23,11 @@ public class NextScene : MonoBehaviour
 
     public void goNext()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void goMenu()
+    {
         SceneManager.LoadScene("MainMenu");
     }
 }

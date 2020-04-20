@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b65d936374507499b1272f2c255b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIsDone: 0
 --- !u!4 &453636548
 Transform:
   m_ObjectHideFlags: 0
@@ -1007,7 +1008,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 453636547}
-        m_MethodName: goNext
+        m_MethodName: goMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
