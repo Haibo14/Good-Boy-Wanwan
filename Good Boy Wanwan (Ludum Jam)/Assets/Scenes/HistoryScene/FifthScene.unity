@@ -2266,6 +2266,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3990766911654318414, guid: 0e16685d855019845b0a88de5d378c30,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7590861593522548475, guid: 0e16685d855019845b0a88de5d378c30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2514,6 +2519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b65d936374507499b1272f2c255b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIsDone: 0
 --- !u!4 &2075230271
 Transform:
   m_ObjectHideFlags: 0
@@ -2594,6 +2600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733599921718284022, guid: 3a4fe7b33b9ae2647ab974864381b701,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4fe7b33b9ae2647ab974864381b701, type: 3}
