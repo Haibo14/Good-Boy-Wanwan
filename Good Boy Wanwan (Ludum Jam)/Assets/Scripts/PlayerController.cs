@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
 	int state;
 
 	bool shocked;
-	
+
+	public AudioSource impact;
 
 	Transform cameraT;
 
@@ -93,6 +94,11 @@ public class PlayerController : MonoBehaviour
 
 			GameObject manager = GameObject.FindWithTag("Manager");
 			manager.GetComponent<LevelManagerTest>().wanwanIsDead = true;
+
+			if (!impact.isPlaying)
+			{
+				impact.Play(0);
+			}
 
 
 		}
