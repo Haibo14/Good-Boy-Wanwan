@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    bool levelIsDone;
+    public bool levelIsDone;
 
     void Start()
     {

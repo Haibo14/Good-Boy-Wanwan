@@ -9,7 +9,13 @@ public class ElevationHandler : MonoBehaviour
      */
     public GameObject player;
 
+    
     public float distance = 100f;
+
+    void Start()
+    {
+        
+    }
     void FixedUpdate()
     {
         /*
