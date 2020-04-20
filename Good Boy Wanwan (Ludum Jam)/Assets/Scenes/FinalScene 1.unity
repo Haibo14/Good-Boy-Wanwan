@@ -5247,6 +5247,7 @@ MonoBehaviour:
     type: 3}
   CheckPoint: {fileID: 33355115}
   DeathMenu: {fileID: 2017339327}
+  whoIsDeadText: {fileID: 294150861}
   wanwanIsDead: 0
   grannyIsDead: 0
 --- !u!4 &378183428
@@ -19198,7 +19199,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390573145}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0bd336532797add48b339f25a9ad87a4, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: d24ed45e2fc8d2242856acfaf8171abc, type: 2}
   m_EnableTreeColliders: 1

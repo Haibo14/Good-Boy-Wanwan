@@ -16,10 +16,10 @@ public class Granny : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (this.transform.position.y < Terrain.activeTerrain.SampleHeight(transform.position))
-		{
-			this.transform.position = new Vector3(this.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position) + 0.15f, this.transform.position.z);
-		}
+		//if (this.transform.position.y < Terrain.activeTerrain.SampleHeight(transform.position))
+		//{
+			//this.transform.position = new Vector3(this.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position) + 0.15f, this.transform.position.z);
+		//}
 	}
 
 	void OnCollisionEnter(Collision collider)
