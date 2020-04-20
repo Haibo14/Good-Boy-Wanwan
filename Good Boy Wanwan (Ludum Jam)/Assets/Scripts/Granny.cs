@@ -5,6 +5,8 @@ using UnityEngine;
 public class Granny : MonoBehaviour
 {
 	public TextMesh DeathText;
+
+	public GameObject granny;
 	
     void Start()
     {
@@ -17,11 +19,33 @@ public class Granny : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision other){
-		if(other.gameObject.CompareTag("Car")){
-			DeathText.text = "Granny is dead";
-			Destroy(DeathText, 5.0f);
-			//Destroy(this.gameObject, 5.0f);
+	void OnCollisionEnter(Collision collider)
+	{
+
+
+		if (collider.gameObject.CompareTag("Car"))
+		{
+			Debug.Log("Hit");
+
+		
+
+			float force = 2000;
+			float force2 = 500;
+
+			Vector3 dir = collider.contacts[0].point - transform.position;
+
+			dir = -dir.normalized;
+
+			GetComponent<Rigidbody>().AddForce(dir * force);
+
+			granny.transform.parent = null;
+			granny.AddComponent<BoxCollider>();
+			granny.AddComponent<Rigidbody>();
+
+			granny.GetComponent<Rigidbody>().AddForce(dir * force2);
+
+
+
 		}
 	}
 }

@@ -53,16 +53,16 @@ public class CarSpawner : MonoBehaviour
 
     	if(Timer<0 && Go == true){
 	    	GameObject CarPrefab_o = Instantiate(CarPrefab, Spawn1.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o, 80.0f);
+	        
 
 	    	GameObject CarPrefab_o2 = Instantiate(CarPrefab2, Spawn2.position, gameObject.transform.rotation) as GameObject;
-	        Destroy(CarPrefab_o2, 80.0f);
+	        
 
 	        GameObject CarPrefab_o3 = Instantiate(CarPrefab3, Spawn3.position, Quaternion.identity) as GameObject;
-	        Destroy(CarPrefab_o3, 80.0f);
+	        
 
 	        GameObject CarPrefab_o4 = Instantiate(CarPrefab4, Spawn4.position, Quaternion.identity) as GameObject;
-	        Destroy(CarPrefab_o4, 80.0f);
+	        
 
 
 	    	Timer = Random.Range(2,6);
