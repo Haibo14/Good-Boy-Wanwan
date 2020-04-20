@@ -7,6 +7,18 @@ public class GrannyClimbing : MonoBehaviour
     public GameObject player;
 
     public float distance = 300f;
+
+    public AudioSource audioDents;
+
+    bool playAudio;
+
+    void Start()
+    {
+        
+        audioDents.Stop();
+
+        playAudio = true;
+    }
     void FixedUpdate()
     {
         Vector3 lookDown = new Vector3(0, -10, 0) + player.transform.position;
@@ -28,9 +40,20 @@ public class GrannyClimbing : MonoBehaviour
                 player.transform.Rotate(new Vector3(-15f,0,0));
                 Debug.Log("Ca monte");
 
+                if (playAudio == true)
+                {
+                    audioDents.Play(0);
+                    playAudio = false;
+                }
+
             }
 
             Debug.DrawRay(transform.position, Vector3.down);
+        }
+
+        if (!audioDents.isPlaying)
+        { 
+            playAudio = true;
         }
     }
 }
