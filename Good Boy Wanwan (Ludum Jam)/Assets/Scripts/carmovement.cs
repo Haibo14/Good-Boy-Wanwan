@@ -6,11 +6,15 @@ public class carmovement : MonoBehaviour
 {
 	public float Speed;
 
+    public AudioSource Crash;
+
     bool driving;
     // Start is called before the first frame update
     void Start()
     {
         driving = true;
+
+        
     }
 
     // Update is called once per frame
@@ -42,6 +46,10 @@ public class carmovement : MonoBehaviour
                 
                 GetComponent<Rigidbody>().AddForce(dir * force);
 
+            if (!Crash.isPlaying)
+            {
+                Crash.Play(0);
+            }
             driving = false;
 
         }

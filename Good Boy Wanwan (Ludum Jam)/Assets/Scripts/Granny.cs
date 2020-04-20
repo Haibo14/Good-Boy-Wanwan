@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Granny : MonoBehaviour
 {
-	public TextMesh DeathText;
+
 
 	public GameObject granny;
-	
+
+	public AudioSource[] OySounds;
+
+	public AudioSource impact;
+
     void Start()
     {
-        
-    }
+		StartCoroutine(Scream());
+	}
 
     // Update is called once per frame
     void Update()
     {
-		//if (this.transform.position.y < Terrain.activeTerrain.SampleHeight(transform.position))
-		//{
-			//this.transform.position = new Vector3(this.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position) + 0.15f, this.transform.position.z);
-		//}
+		
 	}
 
 	void OnCollisionEnter(Collision collider)
@@ -50,8 +51,28 @@ public class Granny : MonoBehaviour
 			GameObject manager = GameObject.FindWithTag("Manager");
 			manager.GetComponent<LevelManagerTest>().wanwanIsDead = true;
 
+			if (!impact.isPlaying)
+			{
+				impact.Play(0);
+			}
+
 
 
 		}
+	}
+
+	IEnumerator Scream()
+	{
+
+		int index = Random.Range(0, OySounds.Length);
+		AudioSource playingSound = OySounds[index];
+
+		playingSound.Play(0);
+
+		Debug.Log("Playing");
+
+		yield return new WaitForSeconds(Random.Range(7.0f, 15.0f));
+
+		StartCoroutine(Scream());
 	}
 }

@@ -6,6 +6,8 @@ public class CarPontMovement : MonoBehaviour
 {
     public float Speed;
 
+    public AudioSource Crash;
+
     bool driving;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,11 @@ public class CarPontMovement : MonoBehaviour
             dir = -dir.normalized;
 
             GetComponent<Rigidbody>().AddForce(dir * force);
+
+            if (!Crash.isPlaying)
+            {
+                Crash.Play(0);
+            }
 
             driving = false;
 
