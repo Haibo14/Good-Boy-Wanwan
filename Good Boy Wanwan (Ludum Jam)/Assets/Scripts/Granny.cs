@@ -49,7 +49,7 @@ public class Granny : MonoBehaviour
 			granny.GetComponent<Rigidbody>().AddForce(dir * force2);
 
 			GameObject manager = GameObject.FindWithTag("Manager");
-			manager.GetComponent<LevelManagerTest>().wanwanIsDead = true;
+			manager.GetComponent<LevelManagerTest>().grannyIsDead = true;
 
 			if (!impact.isPlaying)
 			{
