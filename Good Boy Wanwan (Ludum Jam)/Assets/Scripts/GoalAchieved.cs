@@ -16,14 +16,16 @@ public class GoalAchieved : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Congrats");
+
             GameObject manager = GameObject.FindWithTag("Manager");
             manager.GetComponent<NextScene>().levelIsDone = true;
 
-            Debug.Log("Congrats");
+           
         }
     }
 }
