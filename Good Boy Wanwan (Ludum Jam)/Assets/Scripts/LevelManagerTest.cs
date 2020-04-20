@@ -8,11 +8,17 @@ public class LevelManagerTest : MonoBehaviour
 
     public GameObject CheckPoint;
 
-    public bool someoneIsDead;
+    public GameObject DeathMenu;
+
+    public bool wanwanIsDead;
+    public bool grannyIsDead;
+    bool lost;
 
     void Start()
     {
-        someoneIsDead = false;
+        wanwanIsDead = false;
+        grannyIsDead = false;
+        lost = false;
     }
 
     // Update is called once per frame
@@ -20,17 +26,37 @@ public class LevelManagerTest : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Duo");
 
-        if (someoneIsDead == true)
+        if (wanwanIsDead == true || grannyIsDead == true)
         {
-            Destroy(player.gameObject);
+            lost = true;
         }
 
         if (player == null)
         {
             Instantiate(DuoPrefab, CheckPoint.transform.position, Quaternion.identity);
-            someoneIsDead = false;
+            wanwanIsDead = false;
+            grannyIsDead = false;
         }
 
-        
+        if (lost == true)
+        {
+            DeathMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
+
+    public void Respawn()
+    {
+        DeathMenu.SetActive(false);
+        lost = false;
+        GameObject player = GameObject.FindWithTag("Duo");
+        Destroy(player);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+        
 }
+

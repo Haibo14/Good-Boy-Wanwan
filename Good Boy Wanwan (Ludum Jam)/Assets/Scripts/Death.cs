@@ -70,6 +70,8 @@ public class Death : MonoBehaviour
         {
             granny.transform.parent = null;
             granny.AddComponent<Rigidbody>();
+            GameObject manager = GameObject.FindWithTag("Manager");
+            manager.GetComponent<LevelManagerTest>().grannyIsDead = true;
             alive = true;
         }
     }

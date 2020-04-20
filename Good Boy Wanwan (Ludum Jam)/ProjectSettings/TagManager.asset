@@ -11,6 +11,8 @@ TagManager:
   - Destination4
   - LeashAndWheelchair
   - Ground
+  - Duo
+  - Manager
   layers:
   - Default
   - TransparentFX

@@ -91,6 +91,9 @@ public class PlayerController : MonoBehaviour
 
 			GetComponent<Rigidbody>().AddForce(dir * force);
 
+			GameObject manager = GameObject.FindWithTag("Manager");
+			manager.GetComponent<LevelManagerTest>().wanwanIsDead = true;
+
 
 		}
 	}

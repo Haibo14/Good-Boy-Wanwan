@@ -16,8 +16,11 @@ public class Granny : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+		if (this.transform.position.y < Terrain.activeTerrain.SampleHeight(transform.position))
+		{
+			this.transform.position = new Vector3(this.transform.position.x, Terrain.activeTerrain.SampleHeight(transform.position) + 0.15f, this.transform.position.z);
+		}
+	}
 
 	void OnCollisionEnter(Collision collider)
 	{
@@ -43,6 +46,9 @@ public class Granny : MonoBehaviour
 			granny.AddComponent<Rigidbody>();
 
 			granny.GetComponent<Rigidbody>().AddForce(dir * force2);
+
+			GameObject manager = GameObject.FindWithTag("Manager");
+			manager.GetComponent<LevelManagerTest>().wanwanIsDead = true;
 
 
 
