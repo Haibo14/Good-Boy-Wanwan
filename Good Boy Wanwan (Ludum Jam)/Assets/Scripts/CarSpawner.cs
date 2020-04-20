@@ -52,10 +52,10 @@ public class CarSpawner : MonoBehaviour
     	Timer -= Time.deltaTime;
 
     	if(Timer<0 && Go == true){
-	    	GameObject CarPrefab_o = Instantiate(CarPrefab, Spawn1.position, gameObject.transform.rotation) as GameObject;
+	    	GameObject CarPrefab_o = Instantiate(CarPrefab, Spawn1.position, Quaternion.identity) as GameObject;
 	        
 
-	    	GameObject CarPrefab_o2 = Instantiate(CarPrefab2, Spawn2.position, gameObject.transform.rotation) as GameObject;
+	    	GameObject CarPrefab_o2 = Instantiate(CarPrefab2, Spawn2.position, Quaternion.identity) as GameObject;
 	        
 
 	        GameObject CarPrefab_o3 = Instantiate(CarPrefab3, Spawn3.position, Quaternion.identity) as GameObject;

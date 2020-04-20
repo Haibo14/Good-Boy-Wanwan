@@ -10,11 +10,10 @@ public class LevelManagerTest : MonoBehaviour
 {
     public GameObject DuoPrefab;
 
-    public GameObject CheckPoint;
 
-    public GameObject DeathMenu;
+    public GameObject DeathMenuWanwan;
+    public GameObject DeathMenuGranny;
 
-    public GameObject whoIsDeadText;
 
     //public TextMeshProUGUI whoIsDead;
 
@@ -39,9 +38,9 @@ public class LevelManagerTest : MonoBehaviour
         if (wanwanIsDead == true)
         {
             lost = true;
-            TextMeshProUGUI whoIsDead = whoIsDeadText.GetComponent<TextMeshProUGUI>();
+            DeathMenuWanwan.SetActive(true);
 
-            whoIsDead.SetText("Wanwan is dead");
+          
         }
 
         if (grannyIsDead == true)
@@ -49,15 +48,13 @@ public class LevelManagerTest : MonoBehaviour
 
 
             lost = true;
-            TextMeshProUGUI whoIsDead = whoIsDeadText.GetComponent<TextMeshProUGUI>();
-
-            whoIsDead.SetText("Granny is dead");
+            DeathMenuGranny.SetActive(true);
         }
 
 
         if (lost == true)
         {
-            DeathMenu.SetActive(true);
+            
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
