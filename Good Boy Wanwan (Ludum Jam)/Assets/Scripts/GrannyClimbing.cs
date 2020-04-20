@@ -9,7 +9,7 @@ public class GrannyClimbing : MonoBehaviour
     public float distance = 300f;
     void FixedUpdate()
     {
-        Vector3 lookDown = new Vector3(transform.position.x, -10, transform.position.z);
+        Vector3 lookDown = new Vector3(0, -10, 0) + player.transform.position;
         RaycastHit hit;
         
         if (Physics.Raycast(transform.position, lookDown, out hit, distance))
@@ -23,12 +23,12 @@ public class GrannyClimbing : MonoBehaviour
             {
 
 
-                player.transform.Translate(new Vector3(0,0,0.1f));
+                player.transform.Rotate(new Vector3(0.3f,0,0));
                 Debug.Log("Ca monte");
 
             }
 
-            Debug.DrawRay(transform.position, Vector3.down);
+            Debug.DrawRay(transform.position, lookDown);
         }
     }
 }

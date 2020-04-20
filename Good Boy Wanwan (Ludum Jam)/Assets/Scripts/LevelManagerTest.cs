@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class LevelManagerTest : MonoBehaviour
@@ -66,7 +67,9 @@ public class LevelManagerTest : MonoBehaviour
 
     public void Respawn()
     {
-        DeathMenu.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        /*DeathMenu.SetActive(false);
         lost = false;
         GameObject player = GameObject.FindWithTag("Duo");
         Destroy(player);
@@ -76,7 +79,7 @@ public class LevelManagerTest : MonoBehaviour
         grannyIsDead = false;
 
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = false;*/
     }
 
         
