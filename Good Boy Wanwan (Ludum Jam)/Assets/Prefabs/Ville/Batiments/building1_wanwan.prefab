@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 8981350578200422077}
   - component: {fileID: 3429671089535015492}
   - component: {fileID: 483782372185774876}
-  - component: {fileID: 3509184715999693986}
-  - component: {fileID: 2078353502126093505}
   m_Layer: 0
   m_Name: building1_wanwan
   m_TagString: Untagged
@@ -96,31 +94,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.00066365633, y: 0.0035975669, z: 0.0007933904}
-  m_Center: {x: -0.0076403865, y: -0.0032239018, z: 0.0015416524}
---- !u!65 &3509184715999693986
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4009458915396513432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.010132982, y: 0.011329663, z: 0.010305701}
-  m_Center: {x: 0.000072565585, y: 0.00064214534, z: 0}
---- !u!65 &2078353502126093505
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4009458915396513432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.00044471622, y: 0.0035624485, z: 0.00066177285}
-  m_Center: {x: -0.007633426, y: -0.0032414617, z: -0.0016322786}
+  m_Size: {x: 0.01337766, y: 0.011329663, z: 0.010305701}
+  m_Center: {x: -0.0015497716, y: 0.0006421452, z: 0}
