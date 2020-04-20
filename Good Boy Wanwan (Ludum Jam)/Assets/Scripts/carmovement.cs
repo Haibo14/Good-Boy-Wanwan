@@ -8,6 +8,10 @@ public class carmovement : MonoBehaviour
 
     public AudioSource Crash;
 
+    private float Timer;
+    
+    
+
     bool driving;
     // Start is called before the first frame update
     void Start()
@@ -15,12 +19,26 @@ public class carmovement : MonoBehaviour
         driving = true;
 
         
+        
+        Timer = 10.0f;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (driving == true)
+
+        if (driving == false)
+        {
+            Timer -= Time.deltaTime;
+        }
+
+        if (Timer <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
+            if (driving == true)
         {
             transform.Translate(Vector3.forward * Speed * Time.deltaTime, Space.World);
 
