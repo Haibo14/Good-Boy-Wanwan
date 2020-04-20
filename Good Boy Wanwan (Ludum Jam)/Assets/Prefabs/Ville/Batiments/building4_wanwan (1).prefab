@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5457801194405084762}
   - component: {fileID: 3955576618339566700}
   - component: {fileID: 7339053822761990293}
+  - component: {fileID: 7387259394295108996}
+  - component: {fileID: 7841495005088145178}
+  - component: {fileID: 6224479502380372401}
   m_Layer: 0
   m_Name: building4_wanwan (1)
   m_TagString: Untagged
@@ -82,3 +85,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7387259394295108996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071754459643726921}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15168223, y: 0.2963005, z: 0.13730112}
+  m_Center: {x: 0.022087444, y: 0.008547084, z: 0.000000008635221}
+--- !u!65 &7841495005088145178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071754459643726921}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009149633, y: 0.068556935, z: 0.0077849613}
+  m_Center: {x: -0.08867477, y: -0.105324715, z: 0.020495111}
+--- !u!65 &6224479502380372401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071754459643726921}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009070494, y: 0.07010087, z: 0.0070876502}
+  m_Center: {x: -0.089778826, y: -0.104552746, z: -0.023033373}
