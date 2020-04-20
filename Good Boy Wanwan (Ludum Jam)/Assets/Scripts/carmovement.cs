@@ -25,6 +25,7 @@ public class carmovement : MonoBehaviour
         if (driving == false)
         {
             transform.Translate(new Vector3(0, 0, 0));
+            gameObject.transform.tag = "StoppedCar";
         }
     }
 
@@ -33,7 +34,7 @@ public class carmovement : MonoBehaviour
         if (collider.gameObject.CompareTag("LeashAndWheelchair") || collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("Car"))
         {
             
-                float force = 10000;
+                float force = 5000;
 
                 Vector3 dir = collider.contacts[0].point - transform.position;
                 
