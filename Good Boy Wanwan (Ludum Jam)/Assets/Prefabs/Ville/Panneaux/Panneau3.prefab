@@ -171,6 +171,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6445551865577988984}
+  - component: {fileID: 5712294992704187289}
+  - component: {fileID: 6692469864782080535}
   m_Layer: 0
   m_Name: Panneau3
   m_TagString: Untagged
@@ -195,6 +197,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5712294992704187289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757698887225684220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.44926172, y: 13.160485, z: 1}
+  m_Center: {x: 0.012821092, y: -9.00982, z: 0}
+--- !u!65 &6692469864782080535
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757698887225684220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9105058, y: 4.2160015, z: 1}
+  m_Center: {x: -0.04949776, y: -0.18642294, z: 0}
 --- !u!1001 &711813839037976914
 PrefabInstance:
   m_ObjectHideFlags: 0
