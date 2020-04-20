@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5405288053325354031}
   - component: {fileID: 3916010062930374169}
   - component: {fileID: 7306244925947515616}
+  - component: {fileID: 1426285543647025060}
   m_Layer: 0
   m_Name: supermarket_maybefinale
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1426285543647025060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032014134690457148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.012485569, y: 0.01114705, z: 0.010501995}
+  m_Center: {x: -0.0012221566, y: 0.0005735206, z: -0.00006186775}
