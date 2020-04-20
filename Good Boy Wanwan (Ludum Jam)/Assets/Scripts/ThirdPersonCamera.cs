@@ -6,7 +6,7 @@ public class ThirdPersonCamera : MonoBehaviour
 
 	public bool lockCursor;
 	public float mouseSensitivity = 10;
-	public Transform target;
+	Transform target;
 	public float dstFromTarget = 2;
 	public Vector2 pitchMinMax = new Vector2(-40, 85);
 
@@ -28,7 +28,8 @@ public class ThirdPersonCamera : MonoBehaviour
 
 	void LateUpdate()
 	{
-		
+		GameObject player = GameObject.FindWithTag("Player");
+		target = player.transform;
 
 		yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
 		pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
